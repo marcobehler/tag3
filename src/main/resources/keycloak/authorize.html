@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>Do you want to do this?</p>
+
+<ul>
+    <li>${client}</li>
+    <li>Wants access to your all your transactional data?</li>
+    <!--<li>With the following scope: ${scope}</li>-->
+</ul>
+
+<form method="post"  action="/authorize">
+    <input type="hidden"/>
+    <input type="submit" value="Yes, do it!"/>
+</form>
+
+</body>
+</html>
