@@ -1,6 +1,8 @@
 package com.marcobehler;
 
+import com.marcobehler.clientapplication.ClientApplicationServlet;
 import com.marcobehler.keycloak.KeycloakServlet;
+import com.marcobehler.resourceserver.ResourceServerServlet;
 import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.Wrapper;
@@ -11,7 +13,9 @@ import javax.servlet.http.HttpServlet;
 public class ApplicationLauncher {
 
     public static void main(String[] args) throws LifecycleException {
-        launchTomcat(8082, new KeycloakServlet());
+        launchTomcat(8080, new ClientApplicationServlet());
+        launchTomcat(8081, new KeycloakServlet());
+        launchTomcat(8082, new ResourceServerServlet());
     }
 
     public static Tomcat launchTomcat(Integer port, HttpServlet httpServlet) throws LifecycleException {
