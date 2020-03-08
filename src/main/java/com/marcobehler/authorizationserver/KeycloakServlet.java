@@ -1,4 +1,4 @@
-package com.marcobehler.keycloak;
+package com.marcobehler.authorizationserver;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.marcobehler.Database;
